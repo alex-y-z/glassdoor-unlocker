@@ -1,4 +1,4 @@
-const OVERLAY_IDS = ['HardsellOverlay', 'ContentWallHardsell'];
+const OVERLAY_IDS = ['HardsellOverlay', 'ContentWallHardsell', 'ContentHardsell'];
 
 const unlockPage = () => {
 	document.body.style.overflow = '';
