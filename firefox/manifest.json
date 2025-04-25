@@ -2,7 +2,7 @@
     "author": "Alex Turner",
     "name": "Glassdoor Unlocker",
     "description": "Bypass most login and contribution barriers on Glassdoor.",
-    "version": "1.1",
+    "version": "1.2",
     "manifest_version": 3,
     
     "browser_specific_settings": {
