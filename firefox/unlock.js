@@ -106,10 +106,14 @@ if (content) {
 	new MutationObserver((mutations) => {
 		for (const mutation of mutations) {
 			for (const node of mutation.addedNodes) {
-				if (node.className && node.className.includes('review-overview_hidden')) {
+				const nodeClass = (node.nodeType == 1) && node.getAttribute('class');
+				if (!nodeClass) {
+					continue; // Not an element or no class
+				}
+				else if (nodeClass.includes('review-overview_hidden')) {
 					unlockInsights(node);
 				}
-				else if (node.className && node.className.includes('ReviewsList')) {
+				else if (nodeClass.includes('ReviewsList')) {
 					node.querySelectorAll('div[id^="empReview"]').forEach(unlockReview);
 					return; // Loaded together on initial page visit
 				}
