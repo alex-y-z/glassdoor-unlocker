@@ -1,0 +1,43 @@
+{
+    "author": "Alex Turner",
+    "name": "Glassdoor Unlocker",
+    "description": "Bypass most login and contribution barriers on Glassdoor.",
+    "version": "1.3",
+    "manifest_version": 3,
+    
+    "icons": {
+        "32": "icons/icon-32.png",
+        "48": "icons/icon-48.png",
+        "96": "icons/icon-96.png",
+        "128": "icons/icon-128.png"
+    },
+    
+    "content_scripts": [
+        {
+            "js": ["unlock.js"],
+            "run_at": "document_end",
+            "matches": [
+                "*://*.glassdoor.com/*",
+                "*://*.glassdoor.com.ar/*",
+                "*://*.glassdoor.com.au/*",
+                "*://*.glassdoor.be/*",
+                "*://*.glassdoor.com.br/*",
+                "*://*.glassdoor.ca/*",
+                "*://*.glassdoor.de/*",
+                "*://*.glassdoor.es/*",
+                "*://*.glassdoor.fr/*",
+                "*://*.glassdoor.com.hk/*",
+                "*://*.glassdoor.co.in/*",
+                "*://*.glassdoor.ie/*",
+                "*://*.glassdoor.it/*",
+                "*://*.glassdoor.com.mx/*",
+                "*://*.glassdoor.nl/*",
+                "*://*.glassdoor.co.nz/*",
+                "*://*.glassdoor.at/*",
+                "*://*.glassdoor.ch/*",
+                "*://*.glassdoor.sg/*",
+                "*://*.glassdoor.co.uk/*"
+            ]
+        }
+    ]
+}
